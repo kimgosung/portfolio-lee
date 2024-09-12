@@ -131,7 +131,7 @@ const EnhancedHomeSection: React.FC = () => {
                 />
 
                 <motion.div
-                    className="absolute bottom-0 right-32 w-1/2 h-4/5 hidden lg:block"
+                    className="absolute bottom-0 right-32 w-1/2 h-4/5 lg:block"
                     style={{ scale: imageScale }}
                 >
                     <Image
@@ -263,7 +263,7 @@ const SkillsSection = () => {
     ];
 
     return (
-        <Section id="skills" className="bg-gray-900 py-20">
+        <Section id="skills" className="bg-gray-900 py-20 min-h-screen flex flex-col justify-center">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold mb-12 text-white">Skills</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -504,23 +504,6 @@ const WorkExperienceSection: React.FC = () => {
                                 <li>매주 업데이트되는 메인 피쳐 및 이벤트 등 컨텐츠 개발</li>
                             </ul>
                         </div>
-
-                        <div className="mb-8">
-                            <h4 className="text-xl font-semibold mb-4 text-blue-300 flex items-center">
-                                <ChevronRight className="mr-2" size={20} />
-                                개발 사항
-                            </h4>
-                            <ul className="list-disc ml-10 text-gray-300 leading-7 space-y-2">
-                                <li>시즌2 신규 전투(에스텔라) 시스템 개발</li>
-                                <li>4대 이벤트 및 월간 포인트 미션 이벤트 개발 - 게임 컨텐츠를 통해 포인트를 얻고 이에 따라 랭킹 계산 및 보상 지급 시스템 구현</li>
-                                <li>시즌3 신규 전투(망자의 은신처) 시스템 개발</li>
-                                <li>시즌3 신규 탐험 지역 시스템 개발</li>
-                                <li>경매 시스템(깨비 장터, 광장 동상 세우기) 개발</li>
-                                <li>QA팀 및 운영팀을 위한 다양한 운영툴 기능 개발</li>
-                                <li>이외의 매주 업데이트되는 컨텐츠 다수 개발</li>
-                            </ul>
-                        </div>
-
                         <div>
                             <h4 className="text-xl font-semibold mb-4 text-blue-300 flex items-center">
                                 <ChevronRight className="mr-2" size={20} />
@@ -542,25 +525,25 @@ const WorkExperienceSection: React.FC = () => {
 };
 
 const Activity: React.FC = () => (
-        <Section id="activity" className="bg-gray-900 py-20">
+        <Section id="activity" className="bg-gray-900 py-20 min-h-screen">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold mb-12 text-white">Activity</h2>
+                <h2 className="text-4xl font-bold mb-12 text-white ">Activity</h2>
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                     <motion.div
                         className="flex flex-col gap-2 mb-4 md:mb-0 w-full md:w-96"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5}}
                     >
                         <p className="text-gray-400">2022.09 ~ 2023.11</p>
-                        <h3 className="text-2xl font-semibold text-green-400">디지털 역량 강화 사업 서포터즈 활동</h3>
+                        <h3 className="text-2xl font-semibold text-blue-400">디지털 역량 강화 사업 서포터즈 활동</h3>
                         <h4 className="text-md text-gray-300">과학기술정보통신부, 한국지능정보사회진흥원</h4>
                     </motion.div>
                     <motion.div
                         className="flex flex-col gap-4"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5, delay: 0.2}}
                     >
                         <ul className="list-disc list-inside ml-4 text-gray-300 leading-8">
                             <li>디지털 역량 강화 관련 서포트 및 기술 지원 활동 수행</li>
@@ -574,9 +557,9 @@ const Activity: React.FC = () => (
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                     <motion.div
                         className="flex flex-col gap-2 mb-4 md:mb-0 w-full md:w-96"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5, delay: 0.4}}
                     >
                         <p className="text-gray-400">2022.03 ~ 2023.11</p>
                         <h3 className="text-2xl font-semibold text-green-400">건국대학교 IT 컨퍼런스 소모임<br/>KONNECT 임원 활동</h3>
@@ -584,26 +567,51 @@ const Activity: React.FC = () => (
                     </motion.div>
                     <motion.div
                         className="flex flex-col gap-4"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5, delay: 0.6}}
                     >
                         <ul className="list-disc list-inside ml-4 text-gray-300 leading-8">
                             <li>약 60명 규모의 컨퍼런스 단체 운영</li>
                             <li>최신 기술 및 개인 프로젝트에 대한 의견 공유</li>
-                            <li>백엔드 개발자 취업에 관한 특강 진행</li>
+                            <li>백엔드 개발자 취업에 관한 정보 공유</li>
+                        </ul>
+                    </motion.div>
+                </div>
+                <div className="border-b border-gray-800 my-12"></div>
+                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <motion.div
+                        className="flex flex-col gap-2 mb-4 md:mb-0 w-full md:w-96"
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5, delay: 0.4}}
+                    >
+                        <p className="text-gray-400">2022.06 ~ 2023.03</p>
+                        <h3 className="text-2xl font-semibold text-pink-400">건국대학교 알고리즘 스터디<br/>알쿠리즘 활동</h3>
+                        <h4 className="text-md text-gray-300">건국대학교</h4>
+                    </motion.div>
+                    <motion.div
+                        className="flex flex-col gap-4"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.5, delay: 0.6}}
+                    >
+                        <ul className="list-disc list-inside ml-4 text-gray-300 leading-8">
+                            <li>성능 개선을 위한 다양한 알고리즘 학습</li>
+                            <li>문제 풀이 및 피드백 공유</li>
+                            <li>다양한 시각화 자료를 통한 문제 해결력 향상</li>
                         </ul>
                     </motion.div>
                 </div>
             </div>
-    </Section>
+        </Section>
 )
 
 const Footer = () => (
     <footer className="bg-gray-950 text-gray-300 py-8">
         <div className="container mx-auto px-4 text-center">
             <div className="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/%EC%8A%B9%EB%AF%BC-%EC%9D%B4-1b048a328/" target="_blank" rel="noopener noreferrer"
                    className="text-blue-400 hover:text-blue-300 transition-colors">
                     <Linkedin size={30}/>
                 </a>
@@ -611,7 +619,7 @@ const Footer = () => (
                     <Mail size={30}/>
                 </a>
             </div>
-            <p>&copy; {new Date().getFullYear()} 이승민. All rights reserved.</p>
+            <p>&copy; LeeSeungMin_Portfolio. All rights reserved.</p>
         </div>
     </footer>
 );
@@ -688,14 +696,16 @@ const Portfolio: React.FC = () => {
                 <div className="max-w-screen-xl mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
                         <motion.span
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5 }}
-                            className={`text-xl font-bold ${isScrolled ? 'text-white' : 'text-gray-900'}`}
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{duration: 0.5}}
+                            className={`text-lg ${isScrolled ? 'text-white' : 'text-gray-900'}`}
                         >
-                            저승만두
+                            Seungmin
+                            <span className="mx-2">|</span>
+                            <span className="text-lg">fhzpt902@naver.com</span>
                         </motion.span>
-                        <NavItems />
+                        <NavItems/>
                         <div className="md:hidden">
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
